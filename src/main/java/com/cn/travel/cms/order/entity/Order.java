@@ -2,7 +2,6 @@ package com.cn.travel.cms.order.entity;
 
 import com.cn.travel.base.entity.BaseDomain;
 
-@SuppressWarnings("serial")
 public class Order extends BaseDomain {
 
     private String userId;

@@ -7,6 +7,7 @@ import com.cn.travel.utils.Tools;
 import com.cn.travel.web.base.BaseController;
 import com.cn.travel.web.base.PageParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -23,6 +24,8 @@ import java.util.List;
 public class InsuranceController extends BaseController{
     @Autowired
     InsuranceService insuranceService;
+    @Autowired
+    private Environment env;
 
     @RequestMapping("/insuranceList")
     public ModelAndView insuranceList(PageParam pageParam, @RequestParam(value = "query", required = false) String query){
@@ -107,7 +110,7 @@ public class InsuranceController extends BaseController{
                 int size = (int) file.getSize();
                 System.out.println(fileName + "-->" + size);
 
-                String path = "E:/idea/travel/target/classes/static/insurance" ;
+                String path = env.getProperty("path")+"/classes/static/insurance" ;
                 File dest = new File(path + "/" + fileName);
                 if(!dest.getParentFile().exists()){ //判断文件父目录是否存在
                     dest.getParentFile().mkdir();

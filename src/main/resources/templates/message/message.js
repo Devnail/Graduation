@@ -16,7 +16,7 @@ layui.config({
     form.on('select(selectMsg)',function(data){
         var len = $(".msgHtml tr").length;
         for(var i=0;i<len;i++){
-            if(data.value == "0"){
+            if(data.value === "0"){
                 $(".msgHtml tr").eq(i).show();
                 $(".msgHtml tr.no_msg").remove();
             }else{

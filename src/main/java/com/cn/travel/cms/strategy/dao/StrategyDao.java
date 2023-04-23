@@ -15,7 +15,7 @@ import java.util.List;
 public interface StrategyDao extends BaseDao<Strategy> {
     @SelectProvider(type = StrategySqlProvider.class, method = "findById")
     public Strategy findById(@Param("id") String id);
-
+//@selectprovider注解的作用是：指定一个类，这个类中包含了动态sql语句的方法，这个方法的返回值是一个字符串，这个字符串就是动态sql语句
     @SelectProvider(type = StrategySqlProvider.class, method = "findList")
     public List<Strategy> findList();
 

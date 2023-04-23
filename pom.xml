@@ -47,6 +47,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -142,7 +143,7 @@
 			<artifactId>swagger-springmvc</artifactId>
 			<version>0.9.5</version>
 		</dependency>
-		<!--mybagtis jpa注解-->
+		<!--mybatis jpa注解-->
 		<dependency>
 			<groupId>com.github.littlenewbie</groupId>
 			<artifactId>mybatis-jpa</artifactId>
